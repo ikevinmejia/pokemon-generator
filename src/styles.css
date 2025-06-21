@@ -1,0 +1,24 @@
+@import "tailwindcss";
+@plugin "tailwindcss-primeui";
+@import "primeicons/primeicons.css";
+
+
+:root {
+  --primary-50: #fff5f5;
+  --primary-100: #ffe5e5;
+  --primary-200: #ffb3b3;
+  --primary-300: #ff8080;
+  --primary-400: #ff4d4d;
+  --primary-500: #ff1c1c;
+  --primary-600: #e60000;
+  --primary-700: #cc0000;
+  --primary-800: #990000;
+  --primary-900: #660000;
+
+  /* Tokens derivados que afectan hover y active */
+  --primary-color: var(--primary-500);
+  --primary-color-text: #ffffff;
+  --primary-color-hover: var(--primary-600); /* hover */
+  --primary-color-active: var(--primary-700); /* active/click */
+  --primary-color-highlight: var(--primary-100); /* background highlight */
+}
