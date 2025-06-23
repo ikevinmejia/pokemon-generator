@@ -14,14 +14,22 @@
     <h2
       class="text-center text-2xl font-bold transition-all duration-200"
       [ngClass]="{
-        'text-gray-700': showName(),
+        'text-gray-400': showName(),
         'text-transparent': !showName()
       }"
     >
       {{ pokemon()?.name | titlecase }}
     </h2>
     <ng-template #footer>
-      <div class="flex gap-4 mt-1">
+      <div class="flex flex-col gap-4 mt-1">
+        <p-button
+          label="Línea evolutiva"
+          severity="secondary"
+          variant="text"
+          class="w-full"
+          styleClass="w-full"
+          (onClick)="showDialog()"
+        />
         <p-button
           label="Mostrar nombre"
           severity="secondary"

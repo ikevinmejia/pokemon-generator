@@ -1,11 +1,13 @@
 <main class="mt-2 flex flex-col gap-2 justify-center items-center mb-2">
+  <app-pokemon-card/>
   <p-button
     label="Generar pokémon"
     icon="pi pi-refresh"
-    variant="text"
     [raised]="true"
     severity="primary"
+    [loading]="isLoading()"
+    [disabled]="isLoading()"
     (onClick)="onGeneratePokemon()"
   />
-  <app-pokemon-card/>
+  <app-pokemon-dialog/>
 </main>

@@ -3,6 +3,7 @@ import { ChangeDetectionStrategy, Component, computed, inject } from '@angular/c
 import { ButtonModule } from 'primeng/button';
 import { CardModule } from 'primeng/card';
 import { ImageModule } from 'primeng/image';
+import { ModalService } from '../../services/modal.service';
 import { PokemonService } from '../../services/pokemon.service';
 @Component({
   selector: 'app-pokemon-card',
@@ -12,6 +13,18 @@ import { PokemonService } from '../../services/pokemon.service';
 })
 export class PokemonCardComponent {
   private pokemonService = inject(PokemonService);
+  private modalService = inject(ModalService);
+
   public showName = this.pokemonService.showName;
   public pokemon = computed(() => this.pokemonService.pokemon());
+
+  public showDialog(): void {
+    this.modalService.showDialog();
+    this.pokemonService.getEvolutionChain();
+  }
+
+  public getEvoltionChain():void {
+    this.pokemonService.getEvolutionChain();
+  }
+
 }
