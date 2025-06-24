@@ -1,4 +1,17 @@
 <main class="mt-2 flex flex-col gap-2 justify-center items-center mb-2">
+  <section>
+    <!-- <h3 class="font-semibold text-lg mb-2">Buscar por tipo:</h3> -->
+    <p-panel header="Buscar por tipo" [toggleable]="true">
+
+      <div class="flex flex-wrap gap-1 justify-center items-center mb-2">
+        @for (type of pokemonTypes; track $index) {
+          <app-button-pokemon-type [pokemonType]="type" />
+        }
+      </div>
+    </p-panel>
+
+  </section>
+
   <app-pokemon-card/>
   <p-button
     label="Generar pokémon"

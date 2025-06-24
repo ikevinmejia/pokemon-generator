@@ -1,3 +1,44 @@
+export enum PokemonTypeEnum {
+  normal = 1,
+  lucha = 2,
+  volador = 3,
+  veneno = 4,
+  tierra = 5,
+  roca = 6,
+  bicho = 7,
+  fantasma	 = 8,
+  acero = 9,
+  fuego = 10,
+  agua = 11,
+  planta = 12,
+  electrico = 13,
+  psiquico = 14,
+  hielo = 15,
+  dragon = 16,
+  siniestro = 17,
+  hada = 18,
+}
+export enum PokemonTypeSpriteEnum {
+  normal = 'https://images.wikidexcdn.net/mwuploads/wikidex/thumb/9/99/latest/20221208180705/Tipo_normal_EP.png/80px-Tipo_normal_EP.png',
+  lucha = 'https://images.wikidexcdn.net/mwuploads/wikidex/thumb/4/4f/latest/20221208180706/Tipo_lucha_EP.png/80px-Tipo_lucha_EP.png',
+  volador = 'https://images.wikidexcdn.net/mwuploads/wikidex/thumb/0/0f/latest/20221208180706/Tipo_volador_EP.png/80px-Tipo_volador_EP.png',
+  veneno = 'https://images.wikidexcdn.net/mwuploads/wikidex/thumb/2/2f/latest/20221208180706/Tipo_veneno_EP.png/80px-Tipo_veneno_EP.png',
+  tierra = 'https://images.wikidexcdn.net/mwuploads/wikidex/thumb/3/3f/latest/20221208180706/Tipo_tierra_EP.png/80px-Tipo_tierra_EP.png',
+  roca = 'https://images.wikidexcdn.net/mwuploads/wikidex/thumb/1/1f/latest/20221208180706/Tipo_roca_EP.png/80px-Tipo_roca_EP.png',
+  bicho = 'https://images.wikidexcdn.net/mwuploads/wikidex/thumb/6/6f/latest/20221208180706/Tipo_bicho_EP.png/80px-Tipo_bicho_EP.png',
+  fantasma	 = 'https://images.wikidexcdn.net/mwuploads/wikidex/thumb/7/7f/latest/20221208180706/Tipo_fantasma_EP.png/80px-Tipo_fantasma_EP.png',
+  acero = 'https://images.wikidexcdn.net/mwuploads/wikidex/thumb/5/52/latest/20221208180543/Tipo_acero_EP.png/80px-Tipo_acero_EP.png',
+  fuego = 'https://images.wikidexcdn.net/mwuploads/wikidex/thumb/5/59/latest/20221208180426/Tipo_fuego_EP.png/80px-Tipo_fuego_EP.png',
+  agua = 'https://images.wikidexcdn.net/mwuploads/wikidex/thumb/5/59/latest/20221208180426/Tipo_agua_EP.png/80px-Tipo_agua_EP.png',
+  planta = 'https://images.wikidexcdn.net/mwuploads/wikidex/thumb/4/4f/latest/20221208180426/Tipo_planta_EP.png/80px-Tipo_planta_EP.png',
+  electrico = 'https://images.wikidexcdn.net/mwuploads/wikidex/thumb/3/38/latest/20221208180452/Tipo_el%C3%A9ctrico_EP.png/80px-Tipo_el%C3%A9ctrico_EP.png',
+  psiquico = 'https://images.wikidexcdn.net/mwuploads/wikidex/thumb/9/9b/latest/20221208180717/Tipo_ps%C3%ADquico_EP.png/80px-Tipo_ps%C3%ADquico_EP.png',
+  hielo = 'https://images.wikidexcdn.net/mwuploads/wikidex/thumb/1/1f/latest/20221208180426/Tipo_hielo_EP.png/80px-Tipo_hielo_EP.png',
+  dragon = 'https://images.wikidexcdn.net/mwuploads/wikidex/thumb/b/b8/latest/20221208180443/Tipo_drag%C3%B3n_EP.png/80px-Tipo_drag%C3%B3n_EP.png',
+  siniestro = 'https://images.wikidexcdn.net/mwuploads/wikidex/thumb/7/7f/latest/20221208180426/Tipo_siniestro_EP.png/80px-Tipo_siniestro_EP.png',
+  hada = 'https://images.wikidexcdn.net/mwuploads/wikidex/thumb/6/6f/latest/20221208180426/Tipo_hada_EP.png/80px-Tipo_hada_EP.png',
+}
+
 export interface Pokemon {
   abilities:                Ability[];
   base_experience:          number;
@@ -297,3 +338,19 @@ export interface Species {
   name: string;
   url:  string;
 }
+
+export interface PokemonTypeSprite {
+  id: number;
+  key: string;
+  name: string;
+  color: string;
+  sprite: string;
+}
+
+export interface PokemonType {
+  pokemon: {
+    name: string;
+    url:  string;
+  }[]
+}
+

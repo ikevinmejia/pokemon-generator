@@ -1,0 +1,13 @@
+<p-button
+  variant="text"
+  severity="secondary"
+  size="small"
+  [style]="{backgroundColor: isClicked() ? pokemonType().color : 'transparent'}"
+  (onClick)="onClick()"
+>
+  <p-image
+    [src]="pokemonType().sprite"
+    [alt]="pokemonType().name"
+    class="w-full h-full object-contain"
+  />
+</p-button>

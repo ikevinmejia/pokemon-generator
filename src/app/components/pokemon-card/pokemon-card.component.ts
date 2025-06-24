@@ -20,7 +20,7 @@ export class PokemonCardComponent {
 
   public showDialog(): void {
     this.modalService.showDialog();
-    this.pokemonService.getEvolutionChain();
+    this.getEvoltionChain();
   }
 
   public getEvoltionChain():void {

@@ -3,7 +3,7 @@
   <p-card>
     <ng-template #header>
       <p-image
-        [src]="pokemon()?.imgUrl"
+        [src]="pokemon()?.imgUrl ?? 'assets/pokeball.svg'"
         [alt]="pokemon()?.name"
         class="w-full"
         loading="lazy"
